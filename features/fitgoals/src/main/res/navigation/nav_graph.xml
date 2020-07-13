@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_goals">
+
+    <fragment
+        android:id="@+id/nav_goals"
+        android:name="com.bolddevoteam.adidaschallenge.fitgoals.view.fragments.GoalsFragment"
+        tools:layout="@layout/fragment_goals">
+        <action
+            android:id="@+id/listGoals"
+            app:destination="@id/nav_goals_desc">
+            <argument
+                android:name="username"
+                app:argType="string"
+                android:defaultValue="google" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_goals_desc"
+        android:name="com.bolddevoteam.adidaschallenge.fitgoals.view.fragments.GoalsDescFragment"
+        android:label="@string/title_fragment_goals"
+        tools:layout="@layout/fragment_goals_desc" />
+
+</navigation>

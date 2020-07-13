@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.activities.GoalsActivity">
+
+    <fragment
+        android:id="@+id/nav_goals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true" />
+
+    <com.bolddevoteam.adidaschallenge.core.widgets.ProgressBarWidget
+        android:id="@+id/pbwLoadingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        app:file="@drawable/white_adidas" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

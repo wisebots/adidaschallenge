@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'koin'
+
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+    }
+}
+
+android {
+    compileSdkVersion Versions.compileSdk
+    buildToolsVersion Versions.buildTools
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    defaultConfig {
+        applicationId "com.bolddevoteam.adidaschallenge"
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            zipAlignEnabled true
+            ext.alwaysUpdateBuildId = false
+        }
+    }
+    dynamicFeatures = [Features.fitgoals]
+}
+
+ext.nav_version = '1.0.0-alpha06'
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    api project(Modules.core)
+
+    implementation KoinLibraries.koinAndroid
+    implementation KoinLibraries.koinViewModel
+    implementation KoinLibraries.koinScope
+
+    implementation NetworkLibraries.gsonConverter
+    implementation 'androidx.navigation:navigation-runtime:2.1.0'
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}

@@ -1,0 +1,4 @@
+include ':app',
+        ':commons:core',
+        ':features:fitgoals'
+rootProject.name = "Adidas Challenge"

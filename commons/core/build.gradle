@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion Versions.compileSdk
+    buildToolsVersion Versions.buildTools
+
+    defaultConfig {
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation KotlinLibraries.kotlin
+    implementation KotlinLibraries.coroutinesAndroid
+    implementation KotlinLibraries.coroutinesCore
+    implementation KotlinLibraries.kotlinReflect
+
+    implementation KoinLibraries.koinAndroid
+    implementation KoinLibraries.koinViewModel
+    implementation KoinLibraries.koinScope
+
+    implementation ArchitectureLibraries.lifecycleExtensions
+    implementation ArchitectureLibraries.lifecycleRuntime
+    implementation ArchitectureLibraries.lifecycleViewModel
+    implementation ArchitectureLibraries.lifecycleLivedata
+
+    implementation SupportLibraries.design
+
+    implementation NetworkLibraries.retrofit2
+
+    implementation NavigationLibraries.navigationFragment
+    implementation NavigationLibraries.navigationktxFragment
+    implementation NavigationLibraries.navigationktxUI
+    implementation NavigationLibraries.navigationUI
+    implementation NavigationLibraries.navigationPaging
+
+    api Libraries.glide
+    kapt Libraries.glideCompiler
+
+}
