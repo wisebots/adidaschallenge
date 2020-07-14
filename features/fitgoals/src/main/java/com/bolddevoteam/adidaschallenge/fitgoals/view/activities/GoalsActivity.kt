@@ -5,7 +5,7 @@ import com.bolddevoteam.adidaschallenge.core.base.BaseActivity
 import com.bolddevoteam.adidaschallenge.fitgoals.R
 import com.bolddevoteam.adidaschallenge.fitgoals.di.GoalsModule
 
-class GoalsActivity : BaseActivity() {
+class GoalsActivity() : BaseActivity() {
 
     override fun getLayout() = R.layout.activity_goals
 
@@ -19,5 +19,4 @@ class GoalsActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         injectModules()
     }
-
 }

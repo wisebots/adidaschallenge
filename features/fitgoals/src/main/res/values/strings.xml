@@ -1,5 +1,9 @@
 <resources>
     <string name="button_load">Load</string>
     <string name="title_fragment_goals">Goals</string>
+    <string name="title_fragment_progress">Progress Description</string>
     <string name="generic_error">General failure loading screen</string>
+    <string name="remote_error">Error loading data</string>
+    <string name="incitement_sign_in">Sign-in to see your progress</string>
+    <string name="incitement_detail">Click to see detailed challenge</string>
 </resources>

@@ -71,6 +71,12 @@ dependencies {
     implementation NavigationLibraries.navigationktxUI
     implementation NavigationLibraries.navigationPaging
 
+    implementation Libraries.playServicesFitness
+    implementation Libraries.playServicesAuth
+    implementation Libraries.anko
+    implementation Libraries.ankoCommons
+    implementation Libraries.ankoDesign
+
     implementation DatabaseLibraries.roomKtx
     kapt DatabaseLibraries.roomCompiler
     implementation DatabaseLibraries.roomRuntime

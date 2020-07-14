@@ -12,6 +12,8 @@ import com.bolddevoteam.adidaschallenge.core.extensions.logDebug
 import com.bolddevoteam.adidaschallenge.core.extensions.snackbar
 import com.bolddevoteam.adidaschallenge.core.extensions.visible
 import com.bolddevoteam.adidaschallenge.core.widgets.ProgressBarWidget
+import com.google.android.gms.fitness.FitnessOptions
+import com.google.android.gms.fitness.data.DataType
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -30,6 +32,11 @@ abstract class BaseActivity : AppCompatActivity() {
 
     private var currentFragment : Fragment? = null
 
+    val fitnessOptions: FitnessOptions = FitnessOptions
+        .builder()
+        .addDataType(DataType.TYPE_ACTIVITY_SEGMENT, FitnessOptions.ACCESS_READ)
+        .build()
+
     fun showError(@StringRes errorMessage: Int, rootView: View) = snackbar(errorMessage, rootView)
 
     fun showError(errorMessage: String?, rootView: View) = snackbar(errorMessage ?: EMPTY_STRING, rootView)
@@ -39,6 +46,8 @@ abstract class BaseActivity : AppCompatActivity() {
     fun hideLoading(progressBar: ProgressBarWidget?) = progressBar?.gone()
 
     fun log(message: String) = logDebug("${this::class.java.canonicalName}", message)
+
+    fun getActivity() = callingActivity
 
     override fun onBackPressed() {
         if (supportFragmentManager.backStackEntryCount < 1

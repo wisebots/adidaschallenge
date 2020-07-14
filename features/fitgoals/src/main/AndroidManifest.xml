@@ -12,7 +12,6 @@
         <dist:fusing dist:include="true" />
     </dist:module>
 
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -22,6 +21,10 @@
 
         <activity
             android:name=".view.activities.GoalsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".view.activities.SignInActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
     </application>

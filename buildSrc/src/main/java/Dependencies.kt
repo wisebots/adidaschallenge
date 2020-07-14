@@ -20,6 +20,7 @@ object Versions {
     val minSdk = 21
     val targetSdk = 29
     val buildTools = "29.0.3"
+    val fitness = "16.0.1"
 
     // Injection
     val koin = "2.1.5"
@@ -47,6 +48,7 @@ object Versions {
     // Reactive
     val rxjava = "2.2.16"
     val rxkotlin = "2.4.0"
+    val rxandroid = "2.1.0"
 
     // Navigation libraries
     val navigation = "2.3.0-alpha06"
@@ -63,6 +65,7 @@ object Versions {
     // Third Libraries
     val timeLib = "1.0.3"
     val glide = "4.11.0"
+    val ankoVersion = "0.10.8"
 }
 
 object KoinLibraries {
@@ -110,6 +113,7 @@ object NavigationLibraries {
 object ReactiveLibraries {
     val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxjava}"
     val rxkotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxkotlin}"
+    val rxandroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxandroid}"
 }
 
 object DatabaseLibraries {
@@ -131,6 +135,11 @@ object Libraries {
     val timeLib = "com.github.kizitonwose:time:${Versions.timeLib}"
     val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+    val playServicesFitness = "com.google.android.gms:play-services-fitness:${Versions.fitness}"
+    val playServicesAuth = "com.google.android.gms:play-services-auth:${Versions.fitness}"
+    val anko = "org.jetbrains.anko:anko:${Versions.ankoVersion}"
+    val ankoCommons = "org.jetbrains.anko:anko-design:${Versions.ankoVersion}"
+    val ankoDesign = "org.jetbrains.anko:anko-commons:${Versions.ankoVersion}"
 }
 
 object TestLibraries {

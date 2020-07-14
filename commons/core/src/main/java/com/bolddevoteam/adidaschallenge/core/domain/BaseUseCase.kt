@@ -1,6 +1,6 @@
 package com.bolddevoteam.adidaschallenge.core.domain
 
-interface BaseUseCase<T : Any, K : Any, R: Any> {
+interface BaseUseCase<T : Any, R: Any> {
     suspend operator fun invoke(): ResultDomain<R>
 }
 

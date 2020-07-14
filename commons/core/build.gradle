@@ -46,6 +46,12 @@ dependencies {
     implementation NavigationLibraries.navigationUI
     implementation NavigationLibraries.navigationPaging
 
+    implementation ReactiveLibraries.rxkotlin
+    implementation ReactiveLibraries.rxandroid
+
+    implementation Libraries.playServicesFitness
+    implementation Libraries.playServicesAuth
+
     api Libraries.glide
     kapt Libraries.glideCompiler
 

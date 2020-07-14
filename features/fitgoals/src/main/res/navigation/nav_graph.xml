@@ -8,21 +8,13 @@
     <fragment
         android:id="@+id/nav_goals"
         android:name="com.bolddevoteam.adidaschallenge.fitgoals.view.fragments.GoalsFragment"
-        tools:layout="@layout/fragment_goals">
-        <action
-            android:id="@+id/listGoals"
-            app:destination="@id/nav_goals_desc">
-            <argument
-                android:name="username"
-                app:argType="string"
-                android:defaultValue="google" />
-        </action>
-    </fragment>
+        android:label="@string/title_fragment_goals"
+        tools:layout="@layout/fragment_goals" />
 
     <fragment
         android:id="@+id/nav_goals_desc"
-        android:name="com.bolddevoteam.adidaschallenge.fitgoals.view.fragments.GoalsDescFragment"
-        android:label="@string/title_fragment_goals"
-        tools:layout="@layout/fragment_goals_desc" />
+        android:name="com.bolddevoteam.adidaschallenge.fitgoals.view.fragments.ProgressFragment"
+        android:label="@string/title_fragment_progress"
+        tools:layout="@layout/fragment_progress" />
 
 </navigation>
